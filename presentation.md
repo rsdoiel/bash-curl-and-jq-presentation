@@ -140,30 +140,53 @@ their publications lists to ORCID.
 + Profile
 + Search
 
+## Authenticating
+
+```shell
+    ./scripts/api-login.sh
+```
+
+Then cut an paste the "export" link to save the auth token
+
+
 ## Getting my bio
 
 + My ORCID is 0000-0003-0900-6903
 + We'll use [scripts/api-bio.sh](scripts/api-bio.sh)
-+ Here's the results
 
-# Getting my profile
+```shell
+    ./scripts/api-bio.sh "0000-0003-0900-6903" | jq .
+```
 
-+ My ORCID is 0000-0003-0900-6903
-+ We'll use [scripts/api-profile.sh](scripts/api-profile.sh)
-+ Here's the results
 
 # Getting my list of works
 
 + My ORCID is 0000-0003-0900-6903
 + We'll use [scripts/api-works.sh](scripts/api-works.sh)
-+ Here's the results
+
+```shell
+    ./scripts/api-works.sh "0000-0003-0900-6903" | jq .
+```
+
+
+# Getting my profile
+
++ My ORCID is 0000-0003-0900-6903
++ We'll use [scripts/api-profile.sh](scripts/api-profile.sh)
+
+```shell
+    ./scripts/api-profile.sh "0000-0003-0900-6903" | jq .
+```
 
 
 # Finding my ORCID from my email address
 
 + Let's search for "rsdoiel@caltech.edu"
 + We'll use [scripts/api-search-email.sh](scripts/api-search-email.sh)
-+ Here's the results
+
+```shell
+    ./scripts/api-search-email.sh "rsdoiel@caltech.edu" | jq .
+```
 
 # Where to go next
 
