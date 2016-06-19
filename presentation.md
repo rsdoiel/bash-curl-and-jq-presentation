@@ -3,11 +3,11 @@
 
 ## Accessing the ORCID Public API
 
-[R. S. Doiel](http://orcid.org/0000-0003-0900-6903)
-2016-06-20, Version 0.0.1, SoCal Code4Lib
-Woodbury University, Saffel Board Room
-Burbank, CA
-[code{4}lib SoCal Summer '16 meetup](http://www.meetup.com/Code4lib-SoCal/events/231192647/)
+    [R. S. Doiel](http://orcid.org/0000-0003-0900-6903)
+    2016-06-20, Version 0.0.1, SoCal Code4Lib
+    Woodbury University, Saffel Board Room
+    Burbank, CA
+    [code{4}lib SoCal Summer '16 meetup](http://www.meetup.com/Code4lib-SoCal/events/231192647/)
 
 # Overview
 
