@@ -6,6 +6,7 @@
 [R. S. Doiel](http://orcid.org/0000-0003-0900-6903)
 2016-06-20, Version 0.0.1, SoCal Code4Lib
 Woodbury University, Saffel Board Room
+Burbank, CA
 
 # Overview
 
@@ -21,7 +22,7 @@ Woodbury University, Saffel Board Room
 
 ## Our plan for Established Faculty
 
-Insentivising ORCID adoption through help faculty/researchers port
+Incentivising ORCID adoption by helping faculty/researchers port
 their publications lists to ORCID.
 
 ## Prototyping and Exploration phase 
@@ -39,16 +40,16 @@ their publications lists to ORCID.
 
 + Works on Mac OS X, Linux and soon [Windows](https://blogs.windows.com/buildingapps/2016/03/30/run-bash-on-ubuntu-on-windows/) too
 + Actually you can run Bash on Windows for some time
-    + but MS is finally officially supporting it as an SDK
+    + MS is officially supporting it via an SDK in Windows 10
 
-# What is ORCID
 
+# What is ORCID?
 
 + [ORCID](http://orcid.org) is a unique indentifier service for authors and researchers
 + It provides a simple [API](http://members.orcid.org/api/api-calls) for accessing or integrating its content
 + API supports both XML and JSON output (we'll be talking about JSON)
 
-# What is JSON
+# What is JSON?
 
 + JSON is a simple notation describing a data structure
 + Most languages I can think of can work with JSON 
@@ -68,12 +69,24 @@ their publications lists to ORCID.
     + Once sequence it working you can automate with cron or run as needed
 + On Linux and Mac OS X there is you already have it installed
 
-# Some bash tricks used
+# Some bash tricks I used
 
-+ Sourcing versus running a Bash file 
 + Using the environment for configuration
     + A practice I picked up from [12 factor Apps](http://12factor.net/)
++ Sourcing versus running a Bash file 
+    + we source configuration, we run bash scripts
++ Pipes (sending content from one program to the next)
++ Assign output to a environment variable
 + Organization repeated tasks into Bash functions
+
+# Don't worry I've already written the scripts
+
++ [etc/setup.conf-example](etc/setup.conf-example) - configuring things
++ [scripts/api-login.sh](scripts/api-login.sh) - authenticates and lets us login
++ [scripts/api-bio.sh](scripts/api-bio.sh) - gets a ORCID Bio
++ [scripts/api-profile.sh](scripts/api-profile.sh) - gets a ORCID Profile
++ [scripts/api-works.sh](scripts/api-works.sh) - gets a ORCID works
+
 
 # What role does curl play?
 
@@ -82,13 +95,6 @@ their publications lists to ORCID.
 + thinking about the web interaction
     + GET, POST
 + Working special headers (e.g. Authorization Token, desired formats)
-
-# What is JSON?
-
-+ Stands for JavaScript Object Notation
-    + Not just JavaScript through, most languages can work natively with JSON
-+ A simple notation describing a data structure 
-    + Often faster to parse than XML (it is simpler than XML)
 
 
 # What is jq?
@@ -100,6 +106,7 @@ their publications lists to ORCID.
     [stedolan.github.io/jq/](https://stedolan.github.io/jq/)
 + It is easy to install (Windows, Mac OS X and Linux)
     + See the "Downloads" link on website
++ I use *jq* to extract our auth token so we can run our other scripts
 
 # Putting it all together
 
@@ -116,13 +123,6 @@ their publications lists to ORCID.
     + Developer tab on your account
     + Generating your key
 
-## Interesting end points
-
-+ Profile
-+ Works
-+ Bio
-+ Search
-
 ## connecting and authentication
 
 + Uses OAuth2 for authentication
@@ -132,6 +132,13 @@ their publications lists to ORCID.
 ## Saving your access token
 
 + [scripts/api-login.sh](scripts/api-login.sh)
+
+## [Interesting end points](http://members.orcid.org/api/api-calls)
+
++ Bio
++ Works
++ Profile
++ Search
 
 ## Getting my bio
 
@@ -163,6 +170,8 @@ their publications lists to ORCID.
 + Our prototype helps us to understand how the ORCID API works
 + I can simply the process into command line tools (e.g. ot project)
 + It can be used with other tooling (e.g. JabRef)
++ ORCID is moving from 1.2 to 2.0 APIs soon
+    + this presentation use 1.2 API calls
 
 
 # Reference links
