@@ -7,6 +7,7 @@
 2016-06-20, Version 0.0.1, SoCal Code4Lib
 Woodbury University, Saffel Board Room
 Burbank, CA
+[code{4}lib SoCal Summer '16 meetup](http://www.meetup.com/Code4lib-SoCal/events/231192647/)
 
 # Overview
 
