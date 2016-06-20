@@ -3,7 +3,7 @@ build:
 	md2slides -t 'Bash, curl and jq: Accessing the Public ORCID API' presentation.md 
 
 publish:
-	git commit -am "saving for publish"
+	git commit -am "snapshot master"
 	git push origin master
 	git checkout gh-pages
 	git pull origin master
