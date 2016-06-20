@@ -5,7 +5,7 @@ build:
 publish:
 	git commit -am "publishing"
 	git push origin master
-	git checkout -b gh-pages
+	git checkout gh-pages
 	git pull origin master
 	git commit -am "publishing to gh-pages"
 	git push origin gh-pages
