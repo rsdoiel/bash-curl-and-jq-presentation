@@ -264,7 +264,7 @@ Then cut an paste the "export" link to save the auth token
 
 # Finding my ORCID from my email address
 
-+ Let's search for "rsdoiel@caltech.edu"
++ Let's search for "*@caltech.edu"
 + We'll use [scripts/api-search-email.sh](./scripts/api-search-email.sh.txt)
 
 ```shell
