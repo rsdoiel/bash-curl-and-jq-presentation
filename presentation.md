@@ -8,11 +8,15 @@
 + Woodbury University, Saffel Board Room, Burbank, CA
 + [code{4}lib SoCal Summer '16 meetup](http://www.meetup.com/Code4lib-SoCal/events/231192647/)
 
+--
+
 # Overview
 
 + Caltech Library's Research Services is promoting ORCID adoption
 + Who has ORCID?
 + Who needs them?
+
+--
 
 ## A couple user profiles
 
@@ -20,15 +24,21 @@
 2. New researcher/faculty (easy case)
 3. Established researcher/faculty with publication history
 
+--
+
 ## Our plan for Established Faculty
 
 Incentivising ORCID adoption by helping faculty/researchers port
 their publications lists to ORCID.
 
+--
+
 ## Prototyping and Exploration phase 
 
 + We're not exactly sure what we need yet but have some ideas
 + We can iterate through specific user profiles to get a better idea
+
+--
 
 ## A simple prototyping toolkit
 
@@ -36,18 +46,23 @@ their publications lists to ORCID.
 + curl (*the* command line utility for working with web content)
 + jq (a JSON processor that can filter or pretty JSON content)
 
+--
+
 ## A simple prototyping toolkit
 
 + Works on Mac OS X, Linux and soon [Windows](https://blogs.windows.com/buildingapps/2016/03/30/run-bash-on-ubuntu-on-windows/) too
 + Actually you can run Bash on Windows for some time
     + MS is officially supporting it via an SDK in Windows 10
 
+--
 
 # What is ORCID?
 
 + [ORCID](http://orcid.org) is a unique indentifier service for authors and researchers
 + It provides a simple [API](http://members.orcid.org/api/api-calls) for accessing or integrating its content
 + API supports both XML and JSON output (we'll be talking about JSON)
+
+--
 
 # What is JSON?
 
@@ -56,6 +71,8 @@ their publications lists to ORCID.
     + even Bash my using jq
 + It makes it easy to describe trees, lists or object properties
     + JSON-LD is Linked Data expressed in JSON
+
+--
 
 # What role does Bash play?
 
@@ -69,6 +86,8 @@ their publications lists to ORCID.
     + Once sequence it working you can automate with cron or run as needed
 + On Linux and Mac OS X there is you already have it installed
 
+--
+
 # Some bash tricks I used
 
 + Using the environment for configuration
@@ -79,6 +98,8 @@ their publications lists to ORCID.
 + Assign output to a environment variable
 + Organization repeated tasks into Bash functions
 
+--
+
 # Don't worry I've already written the scripts
 
 + [etc/setup.conf-example](etc/setup.conf-example) - configuring things
@@ -87,6 +108,7 @@ their publications lists to ORCID.
 + [scripts/api-profile.sh](scripts/api-profile.sh) - gets a ORCID Profile
 + [scripts/api-works.sh](scripts/api-works.sh) - gets a ORCID works
 
+--
 
 # What role does curl play?
 
@@ -96,6 +118,7 @@ their publications lists to ORCID.
     + GET, POST
 + Working special headers (e.g. Authorization Token, desired formats)
 
+--
 
 # What is jq?
 
@@ -108,6 +131,8 @@ their publications lists to ORCID.
     + See the "Downloads" link on website
 + I use *jq* to extract our auth token so we can run our other scripts
 
+--
+
 # Putting it all together
 
 ## ORCID APIS
@@ -116,6 +141,8 @@ their publications lists to ORCID.
 + Public (read only, everyone can access)
 + Member (allows updates, must have membership)
 
+--
+
 ## Getting access
 
 + How to signup for an ORCID key
@@ -123,15 +150,21 @@ their publications lists to ORCID.
     + Developer tab on your account
     + Generating your key
 
+--
+
 ## connecting and authentication
 
 + Uses OAuth2 for authentication
 + Which means we need to save the Access Token
 + We can script that with curl and export the token's value as an environment variable
 
+--
+
 ## Saving your access token
 
 + [scripts/api-login.sh](scripts/api-login.sh)
+
+--
 
 ## [Interesting end points](http://members.orcid.org/api/api-calls)
 
@@ -139,6 +172,8 @@ their publications lists to ORCID.
 + Works
 + Profile
 + Search
+
+--
 
 ## Authenticating
 
@@ -148,6 +183,7 @@ their publications lists to ORCID.
 
 Then cut an paste the "export" link to save the auth token
 
+--
 
 ## Getting my bio
 
@@ -158,6 +194,7 @@ Then cut an paste the "export" link to save the auth token
     ./scripts/api-bio.sh "0000-0003-0900-6903" | jq .
 ```
 
+--
 
 # Getting my list of works
 
@@ -168,6 +205,7 @@ Then cut an paste the "export" link to save the auth token
     ./scripts/api-works.sh "0000-0003-0900-6903" | jq .
 ```
 
+--
 
 # Getting my profile
 
@@ -178,6 +216,7 @@ Then cut an paste the "export" link to save the auth token
     ./scripts/api-profile.sh "0000-0003-0900-6903" | jq .
 ```
 
+--
 
 # Finding my ORCID from my email address
 
@@ -188,6 +227,8 @@ Then cut an paste the "export" link to save the auth token
     ./scripts/api-search-email.sh "rsdoiel@caltech.edu" | jq .
 ```
 
+--
+
 # Where to go next
 
 + Our prototype helps us to understand how the ORCID API works
@@ -196,6 +237,7 @@ Then cut an paste the "export" link to save the auth token
 + ORCID is moving from 1.2 to 2.0 APIs soon
     + this presentation use 1.2 API calls
 
+--
 
 # Reference links
 
@@ -205,6 +247,7 @@ Then cut an paste the "export" link to save the auth token
 + [JSON](http://json.org/)
 + [jq](https://stedolan.github.io/jq/)
 
+--
 
 # Credits
 
