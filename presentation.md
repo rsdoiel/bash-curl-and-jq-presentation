@@ -295,13 +295,11 @@ Then cut an paste the "export" link to save the auth token
 
 --
 
-# About
+# Thank you
 
 + R. S. Doiel <rsdoiel@caltech.edu>
     + [ORCID 0000-0003-0900-6903](http://orcid.org/0000-0003-0900-6903)
-    + [github.com/rsdoiel](https://github.com/rsdoiel)
-    + [github.com/caltechlibrary](https://github.com/caltechlibrary)
-+ [rsdoiel.github.io/bash-curl-and-jq-presentation](http://rsdoiel.github.io/bash-curl-and-jq-presentation)
+    + [rsdoiel.github.io/bash-curl-and-jq-presentation](http://rsdoiel.github.io/bash-curl-and-jq-presentation)
 + Acknowledgements
     + [Caltech Library](http://library.caltech.edu)
     + Gail Clement, Laurel Narizny and Heather Wilson for encouragement
