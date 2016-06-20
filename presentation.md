@@ -177,7 +177,7 @@ their publications lists to ORCID.
 ```
 
 + Note the "dot" telling Bash we're "sourcing" as opposed to "executing" the script
-+ See [etc/setup.conf-example](./etc/setup.conf-example)
++ See [etc/setup.conf-example](./etc/setup.conf-example.txt)
 
 --
 
@@ -245,7 +245,7 @@ Then cut an paste the "export" link to save the auth token
     ./scripts/api-works.sh "0000-0003-0900-6903" | jq .
 ```
 
-[Example output](./examples/work.json)
+[Example output](./examples/works.json)
 
 --
 
