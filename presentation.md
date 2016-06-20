@@ -102,7 +102,7 @@ their publications lists to ORCID.
 
 # Don't worry I've already written the scripts
 
-+ [etc/setup.conf-example](./etc/setup.conf-example) - configuring things
++ [etc/setup.conf-example](./etc/setup.conf-example.txt) - configuring things
 + [scripts/api-login.sh](./scripts/api-login.sh.txt) - authenticates and lets us login
 + [scripts/api-bio.sh](./scripts/api-bio.sh.txt) - gets a ORCID Bio
 + [scripts/api-profile.sh](./scripts/api-profile.sh.txt) - gets a ORCID Profile
