@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Bash, curl and jq: Accessing the Public ORCID API</title>
+   <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+	<section>
+<h1>Finding my ORCID from my email address</h1>
+
+<ul>
+<li>Let&rsquo;s search for &ldquo;rsdoiel@caltech.edu&rdquo;</li>
+<li>We&rsquo;ll use <a href="scripts/api-search-email.sh">scripts/api-search-email.sh</a></li>
+</ul>
+
+<pre><code class="language-shell">    ./scripts/api-search-email.sh &quot;*@caltech.edu&quot; | jq .
+</code></pre>
+
+<p><a href="./examples/search.json">Example output</a></p>
+
+	</section>
+	<nav>
+<a href="00-presentation.html">home</a>&nbsp;<a href="25-presentation.html">prev</a>&nbsp;<a href="27-presentation.html">next</a>
+	</nav>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Bash, curl and jq: Accessing the Public ORCID API</title>
+   <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+	<section>
+<h2>Getting my bio</h2>
+
+<ul>
+<li>My ORCID is 0000-0003-0900-6903</li>
+<li>We&rsquo;ll use <a href="scripts/api-bio.sh">scripts/api-bio.sh</a></li>
+</ul>
+
+<pre><code class="language-shell">    ./scripts/api-bio.sh &quot;0000-0003-0900-6903&quot; | jq .
+</code></pre>
+
+<p><a href="./examples/bio.json">Example output</a></p>
+
+	</section>
+	<nav>
+<a href="00-presentation.html">home</a>&nbsp;<a href="22-presentation.html">prev</a>&nbsp;<a href="24-presentation.html">next</a>
+	</nav>
+</body>
+</html>

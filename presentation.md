@@ -102,11 +102,11 @@ their publications lists to ORCID.
 
 # Don't worry I've already written the scripts
 
-+ [etc/setup.conf-example](etc/setup.conf-example) - configuring things
-+ [scripts/api-login.sh](scripts/api-login.sh) - authenticates and lets us login
-+ [scripts/api-bio.sh](scripts/api-bio.sh) - gets a ORCID Bio
-+ [scripts/api-profile.sh](scripts/api-profile.sh) - gets a ORCID Profile
-+ [scripts/api-works.sh](scripts/api-works.sh) - gets a ORCID works
++ [etc/setup.conf-example](./etc/setup.conf-example) - configuring things
++ [scripts/api-login.sh](./scripts/api-login.sh.txt) - authenticates and lets us login
++ [scripts/api-bio.sh](./scripts/api-bio.sh.txt) - gets a ORCID Bio
++ [scripts/api-profile.sh](./scripts/api-profile.sh.txt) - gets a ORCID Profile
++ [scripts/api-works.sh](./scripts/api-works.sh.txt) - gets a ORCID works
 
 --
 
@@ -152,6 +152,14 @@ their publications lists to ORCID.
 
 --
 
+## Getting access
+
++ Sign up at [orcid.org/register](https://orcid.org/register)
++ Go to your ORCID profile [orcid.org/my-orcid](https://orcid.org/my-orcid) 
++ Go to developer tools [orcid.org/developer-tools](https://orcid.org/developer-tools)
+
+--
+
 ## connecting and authentication
 
 + Uses OAuth2 for authentication
@@ -160,9 +168,49 @@ their publications lists to ORCID.
 
 --
 
+## Setting up our environment
+
++ We're going to "source" the setup script
+
+```
+    . etc/setup.conf-example
+```
+
++ Note the "dot" telling Bash we're "sourcing" as opposed to "executing" the script
++ See [etc/setup.conf-example](./etc/setup.conf-example)
+
+--
+
+## Setting up our environment
+
+This sets the following environment variables
+
+1. ORCID_API_URL
+2. ORCID_CLIENT_ID
+3. ORCID_CLIENT_SECRET
+
+
+--
+
 ## Saving your access token
 
-+ [scripts/api-login.sh](scripts/api-login.sh)
++ [scripts/api-login.sh](./scripts/api-login.sh.txt)
+
+--
+
+## Authenticating
+
+Example logging in
+
+
+```
+    ./scripts/api-login.sh 
+
+      export ORCID_ACCESS_TOKEN="This-is-a-dmeo-token-db03d93c-f42e2a07d29a"
+
+```
+
+Then cut an paste the "export" link to save the auth token
 
 --
 
@@ -175,57 +223,55 @@ their publications lists to ORCID.
 
 --
 
-## Authenticating
-
-```shell
-    ./scripts/api-login.sh
-```
-
-Then cut an paste the "export" link to save the auth token
-
---
-
 ## Getting my bio
 
 + My ORCID is 0000-0003-0900-6903
-+ We'll use [scripts/api-bio.sh](scripts/api-bio.sh)
++ We'll use [scripts/api-bio.sh](./scripts/api-bio.sh.txt)
 
 ```shell
     ./scripts/api-bio.sh "0000-0003-0900-6903" | jq .
 ```
+
+[Example output](./examples/bio.json)
 
 --
 
 # Getting my list of works
 
 + My ORCID is 0000-0003-0900-6903
-+ We'll use [scripts/api-works.sh](scripts/api-works.sh)
++ We'll use [scripts/api-works.sh](./scripts/api-works.sh.txt)
 
 ```shell
     ./scripts/api-works.sh "0000-0003-0900-6903" | jq .
 ```
+
+[Example output](./examples/work.json)
 
 --
 
 # Getting my profile
 
 + My ORCID is 0000-0003-0900-6903
-+ We'll use [scripts/api-profile.sh](scripts/api-profile.sh)
++ We'll use [scripts/api-profile.sh](./scripts/api-profile.sh.txt)
 
 ```shell
     ./scripts/api-profile.sh "0000-0003-0900-6903" | jq .
 ```
+
+[Example output](./examples/profile.json)
 
 --
 
 # Finding my ORCID from my email address
 
 + Let's search for "rsdoiel@caltech.edu"
-+ We'll use [scripts/api-search-email.sh](scripts/api-search-email.sh)
++ We'll use [scripts/api-search-email.sh](./scripts/api-search-email.sh.txt)
 
 ```shell
-    ./scripts/api-search-email.sh "rsdoiel@caltech.edu" | jq .
+    ./scripts/api-search-email.sh "*@caltech.edu" | jq .
 ```
+
+[Example output](./examples/search.json)
 
 --
 
