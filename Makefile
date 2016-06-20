@@ -9,3 +9,4 @@ publish:
 	git pull origin master
 	git commit -am "publishing to gh-pages"
 	git push origin gh-pages
+	git checkout master
