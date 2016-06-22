@@ -206,7 +206,7 @@ Example logging in
 ```
     ./scripts/api-login.sh 
 
-      export ORCID_ACCESS_TOKEN="This-is-a-dmeo-token-db03d93c-f42e2a07d29a"
+      export ORCID_ACCESS_TOKEN="This-is-a-demo-token-db03d93c-f42e2a07d29a"
 
 ```
 
