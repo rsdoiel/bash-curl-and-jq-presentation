@@ -3,10 +3,17 @@
 
 ## Accessing the ORCID Public API
 
+## v1.0.0
+
 + [R. S. Doiel](http://orcid.org/0000-0003-0900-6903)
-+ 2016-06-20, Version 0.0.1, SoCal Code4Lib
++ 2016-06-20, SoCal Code4Lib Summer Meetup 2016
 + Woodbury University, Saffel Board Room, Burbank, CA
 + [code{4}lib SoCal Summer '16 meetup](http://www.meetup.com/Code4lib-SoCal/events/231192647/)
+
+## v2.0.x
+
+The version 2 of this presentation is being expanded and improved based on feedback.
+The goal is to serve as a basis for a workshop.
 
 --
 

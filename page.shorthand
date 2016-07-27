@@ -1,0 +1,15 @@
+{{header}} :import-markdown: header.md
+{{footer}} :import-markdown: footer.md
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ArchivesSpace API Workshop</title>
+        <link href="/css/site.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>{{header}}</header>
+        <section>{{content}}</section>
+        <nav>{{nav}}</nav>
+        <footer>{{footer}}</footer>
+    </body>
+</html>
