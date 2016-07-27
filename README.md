@@ -1,6 +1,6 @@
 # Bash, curl and jq presentation
 
-Acessing the ORCID Public API with Bash, curl and jq
+## Introducing the ORCID Public API
 
 + [Abstract](abstract.html)
 + [Prerequisites](requirements.html)
