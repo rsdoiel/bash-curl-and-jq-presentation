@@ -1,4 +1,4 @@
-# Bash, curl and jq presentation
+# Bash, curl and jq 
 
 ## Introducing the ORCID Public API
 
