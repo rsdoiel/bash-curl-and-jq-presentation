@@ -7,13 +7,15 @@ function makePage () {
     html_page=$3
     echo "Generating $html_page"
     shorthand \
+        -e "{{header}} :import-markdown: header.md" \
+        -e "{{footer}} :import-markdown: footer.md" \
         -e "{{content}} :import-markdown: $page" \
         -e "{{nav}} :import-markdown: $nav" \
         page.shorthand > $html_page
 }
 
 # Presentation slides
-md2slides -title 'Bash, curl and jq: Accessing the Public ORCID API' -css css/slides.css -tamplate slide.template presentation.md 
+md2slides -title 'Bash, curl and jq: Accessing the Public ORCID API' -css css/slides.css -template slide.template presentation.md 
 
 # index.html
 makePage README.md nav.md index.html
