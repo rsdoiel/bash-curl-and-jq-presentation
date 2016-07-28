@@ -110,10 +110,10 @@ their publications lists to ORCID.
 # Don't worry I've already written the scripts
 
 + [etc/setup.conf-example](./etc/setup.conf-example.txt) - configuring things
-+ [scripts/api-login.sh](./scripts/api-login.sh.txt) - authenticates and lets us login
-+ [scripts/api-bio.sh](./scripts/api-bio.sh.txt) - gets a ORCID Bio
-+ [scripts/api-profile.sh](./scripts/api-profile.sh.txt) - gets a ORCID Profile
-+ [scripts/api-works.sh](./scripts/api-works.sh.txt) - gets a ORCID works
++ [scripts/api-login.sh](./scripts/api-login.bash.txt) - authenticates and lets us login
++ [scripts/api-bio.sh](./scripts/api-bio.bash.txt) - gets a ORCID Bio
++ [scripts/api-profile.sh](./scripts/api-profile.bash.txt) - gets a ORCID Profile
++ [scripts/api-works.sh](./scripts/api-works.bash.txt) - gets a ORCID works
 
 --
 
@@ -201,7 +201,7 @@ This sets the following environment variables
 
 ## Saving your access token
 
-+ [scripts/api-login.sh](./scripts/api-login.sh.txt)
++ [scripts/api-login.sh](./scripts/api-login.bash.txt)
 
 --
 
@@ -233,7 +233,7 @@ Then cut an paste the "export" link to save the auth token
 ## Getting my bio
 
 + My ORCID is 0000-0003-0900-6903
-+ We'll use [scripts/api-bio.sh](./scripts/api-bio.sh.txt)
++ We'll use [scripts/api-bio.sh](./scripts/api-bio.bash.txt)
 
 ```shell
     ./scripts/api-bio.sh "0000-0003-0900-6903" | jq .
@@ -246,7 +246,7 @@ Then cut an paste the "export" link to save the auth token
 # Getting my list of works
 
 + My ORCID is 0000-0003-0900-6903
-+ We'll use [scripts/api-works.sh](./scripts/api-works.sh.txt)
++ We'll use [scripts/api-works.sh](./scripts/api-works.bash.txt)
 
 ```shell
     ./scripts/api-works.sh "0000-0003-0900-6903" | jq .
@@ -259,7 +259,7 @@ Then cut an paste the "export" link to save the auth token
 # Getting my profile
 
 + My ORCID is 0000-0003-0900-6903
-+ We'll use [scripts/api-profile.sh](./scripts/api-profile.sh.txt)
++ We'll use [scripts/api-profile.sh](./scripts/api-profile.bash.txt)
 
 ```shell
     ./scripts/api-profile.sh "0000-0003-0900-6903" | jq .
@@ -272,7 +272,7 @@ Then cut an paste the "export" link to save the auth token
 # Finding my ORCID from my email address
 
 + Let's search for "*@caltech.edu"
-+ We'll use [scripts/api-search-email.sh](./scripts/api-search-email.sh.txt)
++ We'll use [scripts/api-search-email.sh](./scripts/api-search-email.bash.txt)
 
 ```shell
     ./scripts/api-search-email.sh "*@caltech.edu" | jq .
