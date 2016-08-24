@@ -1,6 +1,7 @@
+@import 'https://fonts.googleapis.com/css?family=Concert+One|Dosis';
 body {
-    font-family: sans;
-    font-size: 16px;
+    font-family: 'Dosis', sans-serif;
+    font-size: calc(1em+1vw);
     padding: 0;
     margin: 0;
     width: 100%;
@@ -26,6 +27,8 @@ a:active, a:focus, a:hover {
 
 
 header {
+    font-family: 'Concert One', cursive;
+    font-size: 80%;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -76,13 +79,14 @@ header div {
 }
 
 header div > a, header div > a:link, header div > a:visited {
-    color: yellow;
-    text-decoration: none;
+    font-weight: lighter;
+    /* caltech orange */
+    color: #FF6E1E; 
 }
 
 header div > a:active, header div > a:focus, header div > a:hover {
-    color: blue;
-    text-decoration: underline;
+    font-weight: lighter;
+    color: lightgreen;
 }
 
 
@@ -143,9 +147,26 @@ img.rss-valid {
 }
 
 h1 {
+    font-family: 'Concert One', cursive;
     font-size: 200%;
 }
 
 h2 {
+    font-family: 'Concert One', cursive;
+    font-weight: lighter;
+    font-size: 170%;
+}
+
+h3 {
+    font-family: 'Concert One', cursive;
+    font-weight: lighter;
     font-size: 120%;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: 'Concert One', cursive;
+    font-weight: lighter;
+    font-size: 100%;
+    text-transform: lowercase;
 }
