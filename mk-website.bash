@@ -6,12 +6,12 @@ function makePage () {
     nav=$2
     html_page=$3
     echo "Generating $html_page"
-    shorthand \
-        -e "{{header}} :import-markdown: header.md" \
-        -e "{{footer}} :import-markdown: footer.md" \
-        -e "{{content}} :import-markdown: $page" \
-        -e "{{nav}} :import-markdown: $nav" \
-        page.shorthand > $html_page
+    mkpage \
+        "header=header.md" \
+        "footer=footer.md" \
+        "content=$page" \
+        "nav=$nav" \
+        page.tmpl > $html_page
 }
 
 # Presentation slides
